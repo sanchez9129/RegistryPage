@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+
+    --color-primary: #38AA44;
+    --color-secondary: #ffffff;
+
+    --bg-primary: rgb(0, 0, 0);
+    --bg--Text: white; 
+    --bg--button:  rgb(0, 140, 255);
+    --bg-button-hover: #00aaff2c; 
+
+    --color-alert: rgb(255, 255, 0);
+    --color-info: rgb(0, 166, 255);
+    --color-error: rgb(255, 0, 0);
+
+}
+
+/* Banner of Wellcome*/
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.534);
+}
+
+/* Conten*/
+
+.margin-Word{
+  margin-top: 10px;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+.data h1{
+    font-size: 2.8rem;
+    margin-left: 18%;
+    margin-right: 18%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: var(--bg--Text);
+    text-wrap: wrap;
+    text-shadow: rgb(0, 132, 255, ) 0 -3px ;
+}
+
+.data p{
+
+    font-size: 1.0rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: var(--bg--Text);
+}
+
+/* Forms */
+
+.Forms{
+    padding-top: 2%;
+    display: flex;
+}
+
+/* Name and Last Name */
+
+.input-container {
+    --c-text: rgb(0, 0, 0);
+    --c-bg: rgb(252, 252, 252);
+    --c-outline: rgb(55, 45 , 190);
+    display: grid;
+    gap: 1ch;
+    position: relative;
+    max-width: 190px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  
+  .input-field {
+    padding: 0.5em 0.75em;
+    border-radius: 0.2em;
+    border: 1px solid var(--c-border, currentColor);
+    color: var(--c-text);
+    font-size: 1rem;
+    letter-spacing: 0.1ch;
+    width: 100%;
+  }
+  
+  /*.input-field:not(:placeholder-shown) + .input-label {
+    transform: translateY(-220%);
+    opacity: 1;
+  }*/
+  
+  .input-field:invalid {
+    --c-border: var(--color-error);
+    --c-text: var(--color-error);
+    --c-outline: var(--color-error);
+  }
+  
+  .input-field:is(:disabled, :read-only) {
+    --c-border: rgb(150, 150, 150);
+    --c-text: rgb(170, 170, 170);
+  }
+  
+  .input-field:is(:focus, :focus-visible) {
+    outline: 2px solid var(--c-outline);
+    outline-offset: 2px;
+  }
+  
+  .input-label {
+    --timing: 200ms ease-in;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transition: transform var(--timing),
+      opacity var(--timing);
+    transform: translateY(-50%);
+    opacity: 0;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: medium;
+  }
+
+/* email */
+
+.input-Email {
+    --c-text: rgb(0, 0, 0);
+    --c-bg: rgb(252, 252, 252);
+    --c-outline: rgb(55, 45 , 190);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: rgb(0, 0, 0);
+    margin-left: 15px;
+    max-width: 195px;
+  }
+  
+  .input-field-email {
+    padding: 0.5em 0.75em;
+    border-radius: 0.2em;
+    border: 1px solid var(--c-border, currentColor);
+    color: var(--c-text);
+    font-size: 1rem;
+    letter-spacing: 0.1ch;
+    width: 220%;
+  }
+  
+  .input-field-email:not(:placeholder-shown) + .input-label {
+    transform: translateY(-220%);
+    opacity: 1;
+  }
+  
+  .input-field:invalid {
+    --c-border: var(--color-info);
+    --c-text: var(--color-error);
+    --c-outline: var(--color-error);
+  }
+  
+  .input-field:is(:disabled, :read-only) {
+    --c-border: rgb(150, 150, 150);
+    --c-text: rgb(170, 170, 170);
+  }
+  
+  .input-field:is(:focus, :focus-visible) {
+    outline: 2px solid var(--c-outline);
+    outline-offset: 2px;
+  }
+  
+  .input-label {
+    --timing: 200ms ease-in;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transition: transform var(--timing),
+      opacity var(--timing);
+    transform: translateY(-50%);
+    opacity: 0;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: medium;
+}
+
+
+/*Text Area */
+
+.input-TextArea {
+    --c-text: rgb(0, 0, 0);
+    --c-bg: rgb(252, 252, 252);
+    --c-outline: rgb(55, 45 , 190);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 609px;
+    height: 150px;
+    color: rgb(0, 0, 0);
+    margin-left: 2%;
+    margin-right: 1%;
+    resize: none;
+    
+  }
+  
+  .input-TextArea {
+   
+    border-radius: 0.2em;
+    color: var(--c-text);
+    font-size: 1rem;
+    letter-spacing: 0.1ch;
+    width: 200%;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .input-TextArea:not(:placeholder-shown) + .input-label {
+    transform: translateY(-220%);
+    opacity: 1;
+    
+  }
+  
+  .input-TextArea:invalid {
+    --c-border: var(--color-info);
+    --c-text: var(--color-error);
+    --c-outline: var(--color-error);
+  }
+  
+  .input-field:is(:disabled, :read-only) {
+    --c-border: rgb(150, 150, 150);
+    --c-text: rgb(170, 170, 170);
+  }
+  
+  .input-TextArea:is(:focus, :focus-visible) {
+    outline: 2px solid var(--c-outline);
+    outline-offset: 2px;
+  }
+  
+  .inputTextArea-label {
+    --timing: 200ms ease-in;
+    position: absolute;
+    top: 40%;
+    transition: transform var(--timing),
+      opacity var(--timing);
+    transform: translateY(-50%);
+    opacity: 0;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: medium;
+}
+
+/*Boton */
+
+.button {
+    color: white;
+    background-color: #00aaff2c;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    border: solid 2px;
+  }
+  
+  .button:hover {
+    background-color: var(--color-primary);
+  }
+  
+/* Footer*/
+
+.footer p{
+    margin-top: 3%;
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: var(--bg--Text);
+    text-wrap: wrap;
+}
+
+.email{
+  font-weight: 700;
+  color: var(--color-info);
+  text-decoration: none;
+}
+
+/* Banner Video
+
+#hero {
+    min-height: 100vh;
+    position: relative;
+}
+
+video{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.capa{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    opacity: 0.9;
+    mix-blend-mode: overlay;
+}*/
+
+
+/* button de whatsapp*/
+
+.wa{
+ 
+  position: relative;
+  margin-left: 82%;
+}
+
+/* break points Movil*/
+
+@media (min-width: 375px) and (max-width: 428px) {
+
+img {
+  margin-left: 5px;
+  width: 100px;
+  height: 38px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.wa{
+ 
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+  
+/* Conten*/
+
+.data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
+}
+.data h1{
+  font-size: 21px;
+  text-align: left;
+  margin-left: 4.5%;
+  margin-right: 4.5%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--bg--Text);
+  text-wrap: wrap;
+  text-shadow: rgb(0, 132, 255, ) 0 -3px ;
+}
+
+.data p{
+
+  font-size: 1.0rem;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--bg--Text);
+
+  margin-left: 4.5%;
+  margin-right: 4.5%;
+}
+
+/* Forms */
+
+.Forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Centra verticalmente el formulario */
+  align-items: flex-end;  
+  margin-right: 140px;   /* Centra horizontalmente el formulario */        /* Añade padding para evitar que los elementos se peguen a los bordes */
+}
+
+/* Name and Last Name */
+
+.input-container {
+  --c-text: rgb(0, 0, 0);
+  --c-bg: rgb(252, 252, 252);
+  --c-outline: rgb(55, 45 , 190);
+  gap: 1ch;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+.input-field {
+  border-radius: 0.2em;
+  border: 1px solid var(--c-border, currentColor);
+  color: var(--c-text);
+  font-size: 1rem;
+  letter-spacing: 0.1ch;
+  width: 180%; /* Ajusta el ancho para dispositivos móviles */
+  box-sizing: border-box;/* Asegura que el padding no afecte el ancho total */
+
+}
+
+.input-field:is(:focus, :focus-visible) {
+  outline: 2px solid var(--c-outline);
+  outline-offset: 2px;
+}
+
+.input-label {
+  --timing: 200ms ease-in;
+  position: absolute;
+  top: 50%;
+  transition: transform var(--timing), opacity var(--timing);
+  transform: translateY(-50%);
+  opacity: 0;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: medium;
+}
+
+/* email */
+.input-Email {
+  --c-text: rgb(0, 0, 0);
+  --c-bg: rgb(252, 252, 252);
+  --c-outline: rgb(55, 45 , 190);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+.input-field-email {
+  padding: 0.5em 0.75em;
+  border-radius: 0.2em;
+  border: 1px solid var(--c-border, currentColor);
+  color: var(--c-text);
+  font-size: 1rem;
+  letter-spacing: 0.1ch;
+  width: 100%; /* Ajusta el ancho para dispositivos móviles */
+  box-sizing: border-box;
+}
+
+.input-field-email:is(:focus, :focus-visible) {
+  outline: 2px solid var(--c-outline);
+  outline-offset: 2px;
+}
+
+.input-label {
+  --timing: 200ms ease-in;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transition: transform var(--timing), opacity var(--timing);
+  transform: translateY(-50%);
+  opacity: 0;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: medium;
+}
+
+/* Text Area */
+
+.input-TextArea {
+  --c-text: rgb(0, 0, 0);
+  --c-bg: rgb(252, 252, 252);
+  --c-outline: rgb(55, 45 , 190);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  width: 104%; /* Ajusta el ancho para dispositivos móviles */
+  color: rgb(0, 0, 0);
+  padding: 0.5em;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.input-TextArea:is(:focus, :focus-visible) {
+  outline: 2px solid var(--c-outline);
+  outline-offset: 2px;
+}
+
+.inputTextArea-label {
+  --timing: 200ms ease-in;
+  position: absolute;
+  top: 40%;
+  transition: transform var(--timing), opacity var(--timing);
+  transform: translateY(-50%);
+  opacity: 0;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.data .input-TextArea textarea{
+
+  margin-right: 15px;
+  margin-left: -35px;
+}
+
+
+/* Footer*/
+
+.footer p{
+  margin-top: 3%;
+  font-size: 0.9rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: var(--bg--Text);
+  text-wrap: wrap;
+}
+
+.email{
+font-weight: 700;
+color: var(--color-info);
+text-decoration: none;
+}
+
+
+}
